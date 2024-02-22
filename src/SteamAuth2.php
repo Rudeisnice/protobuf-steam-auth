@@ -6,6 +6,7 @@ use Curl\Curl;
 use DateTime;
 use DateTimeZone;
 use Exception;
+use Override;
 use SteamAuth\Configs\SteamConfig;
 use SteamAuth\Exceptions\SteamErrorException;
 use SteamAuth\pb2\EAuthSessionGuardType;
@@ -19,7 +20,7 @@ use SteamAuth\Traits\SteamAuthMethods;
 use SteamAuth\Traits\UsefulMethods;
 use SteamTotp\SteamTotp;
 
-class SteamAuth
+class SteamAuth2 extends SteamAuth
 {
     use AuthenticatorLinkerMethods, CookieMethods, UsefulMethods, SteamAuthMethods;
 
@@ -45,7 +46,6 @@ class SteamAuth
         "https://steam.tv",
         "https://checkout.steampowered.com",
     ];
-
 
     public function __construct($login, $password, $sharedSecret = null, array $cookieOptions = [])
     {

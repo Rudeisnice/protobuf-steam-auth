@@ -11,9 +11,9 @@
     ],
     "require": {
         "php-curl-class/php-curl-class": ">=8.10.0",
-        "allegro/php-protobuf": "^0.12.4",
         "ramsey/uuid": "^4.2",
-        "allyans3/php-steam-totp": "^1.0"
+        "allyans3/php-steam-totp": "^1.0",
+        "google/protobuf": "^3.25"
     },
     "autoload": {
         "psr-4": {
@@ -21,6 +21,7 @@
         }
     },
     "require-dev": {
-        "symfony/var-dumper": "^5.4"
+        "symfony/var-dumper": "^5.4",
+        "allegro/php-protobuf": "^0.12.4"
     }
 }
